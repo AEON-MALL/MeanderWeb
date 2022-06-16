@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meander-random</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css"> 
+</head>
+</html>
+
+<body>
+    
+    <div class="loader">
+        <img srg="Walk.gif">
+    </div>
+
+    <div class="container-fluid">
+        <div class="raw">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="jumbotrom">
+                    <h1>Meander <small>Random</small></h1>
+                </div>
+
+                <form role="form" id="meander-form">
+                    <div class="form-group">
+                        <label>I'm looking for </label>
+                        <select id="journeys" class="form-control">
+                            <option>Pick up type</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>In or near</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter locarion or address">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <select id="price" class="form-control">
+                            <option value="$...$$$$$">Anything</option>
+                            <option value="$...$$$">Inexpensive</option>
+                            <option value="$$$...$$$$$">Expensive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search Location</button>
+                </form>
+
+                <div id="random" class="starts-hidden">
+                    <button class="btn btn-link change-random">&lt; change random</button>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a href="#" class="btn-link pull-right shuffle">Shuffle</a>
+                            <h3 class="panel-title">Random</h3>
+                        </div>
+                        <div class="palnel-body">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div id="map"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <ol id="route"></ol>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul id="photos"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+</body>
+</html>
